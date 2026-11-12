@@ -185,4 +185,299 @@
             text-align: center;
         }
 
-        .hero-
+        .hero-image-card img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Categories / Offerings Section */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 8px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .category-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(10, 35, 24, 0.05);
+        }
+
+        .category-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .category-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .price-tag {
+            display: inline-block;
+            background-color: var(--bg-color);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Info Section / Wholesale */
+        .info-banner {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .info-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .info-content h2 {
+            color: var(--accent-light);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .info-content p {
+            color: #dcdcdc;
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #05120c;
+            color: #999;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        footer span {
+            color: var(--accent);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 40px 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.3rem;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-color);
+                padding: 20px 0;
+                border-bottom: 1px solid var(--border-color);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Notification Marquee Banner -->
+    <div class="top-marquee">
+        <div class="marquee-track">
+            <span>📍 Location: Benin City</span>
+            <span>🚚 Nationwide Delivery Available — Distance is not a barrier</span>
+            <span>✨ Premium Quality Wholesale & Retail for Unisex Wear, Shoes, Bags, Home Essentials & Gadgets</span>
+            <span>📍 Location: Benin City</span>
+            <span>🚚 Nationwide Delivery Available — Distance is not a barrier</span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-wrapper">
+                <img src="img.1.jpg" alt="Ethereal's Collection Logo" class="logo-img">
+                <span class="brand-name">Ethereal's Collection</span>
+            </a>
+            
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#wholesale">Wholesale</a></li>
+                <li><a href="https://chat.whatsapp.com/HnnQnNzKOj15DnzXjMVeOb?s=cl&p=a&mlu=4&ilr=4" target="_blank" class="nav-btn">Join WhatsApp Group</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Quality Style & Essentials at <span>Wholesale Prices</span></h1>
+            <p>Your ultimate plug for top-tier unisex wear, luxury bags, stylish shoes, household essentials, home decors, cosmetics, and gadgets. Perfect for personal use or reselling for maximum profit.</p>
+            <a href="https://chat.whatsapp.com/HnnQnNzKOj15DnzXjMVeOb?s=cl&p=a&mlu=4&ilr=4" target="_blank" class="cta-button">Join Our Community</a>
+        </div>
+        <div class="hero-image-card">
+            <img src="img.1.jpg" alt="Ethereal's Collection Brand">
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="section" id="collections">
+        <div class="section-header">
+            <h2>What We Offer</h2>
+            <p>Explore our wide range of carefully curated products available in bulk and retail</p>
+        </div>
+
+        <div class="categories-grid">
+            <div class="category-card">
+                <h3>Unisex Wears</h3>
+                <p>Trendy, high-grade clothing pieces suited for both casual and statement wardrobes.</p>
+                <div class="price-tag">Starting from ₦3,500</div>
+            </div>
+
+            <div class="category-card">
+                <h3>Luxury Bags</h3>
+                <p>Affordable luxury bags crafted to elevate every outfit with sophistication.</p>
+                <div class="price-tag">Wholesale & Retail</div>
+            </div>
+
+            <div class="category-card">
+                <h3>Stylish Shoes</h3>
+                <p>Immaculate footwear selections offering unmatched comfort and modern style.</p>
+                <div class="price-tag">Unbeatable Prices</div>
+            </div>
+
+            <div class="category-card">
+                <h3>Household Essentials</h3>
+                <p>Practical home items, organizers, and decor pieces to beautify your living space.</p>
+                <div class="price-tag">Items as low as ₦3,000</div>
+            </div>
+
+            <div class="category-card">
+                <h3>Beauty & Care</h3>
+                <p>Exquisite perfumes, high-grade jewelry, and premium skincare products.</p>
+                <div class="price-tag">Authentic Quality</div>
+            </div>
+
+            <div class="category-card">
+                <h3>Gadgets & More</h3>
+                <p>Functional tech accessories and everyday gadgets to keep you connected.</p>
+                <div class="price-tag">Top Tier Quality</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wholesale & Reseller Info -->
+    <section class="info-banner" id="wholesale">
+        <div class="info-content">
+            <h2>Buying for Yourself or Reselling?</h2>
+            <p>Whether you want to shop retail or scale your business as a reseller, Ethereal's Collection provides direct access to premium items at unbeatable wholesale rates. Distance is never a barrier—we deliver swiftly across Nigeria.</p>
+            <a href="https://chat.whatsapp.com/HnnQnNzKOj15DnzXjMVeOb?s=cl&p=a&mlu=4&ilr=4" target="_blank" class="cta-button">Click Here to Join WhatsApp Group</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <span>Ethereal's Collection</span>. All Rights Reserved.</p>
+        <p>Accessories • Gadgets • Aesthetics | Based in Benin City, Nigeria</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
